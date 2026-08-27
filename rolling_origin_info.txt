@@ -1,0 +1,8 @@
+ROLLING ORIGIN VALIDATION
+----------------------------------------
+Train: 2015 - 2017 (189 rows) → Test: 2018 (62 rows)
+Train: 2015 - 2018 (251 rows) → Test: 2019 (77 rows)
+Train: 2015 - 2019 (328 rows) → Test: 2020 (84 rows)
+Train: 2015 - 2020 (412 rows) → Test: 2021 (72 rows)
+Train: 2015 - 2021 (484 rows) → Test: 2022 (55 rows)
+Train: 2015 - 2022 (539 rows) → Test: 2023 (57 rows)

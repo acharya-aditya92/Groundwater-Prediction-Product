@@ -1,0 +1,53 @@
+================================================================================
+VALIDATION FRAMEWORK SUMMARY
+Groundwater Quality Forecasting Project
+Generated on: 2026-08-15 23:16:26
+================================================================================
+
+1. DATASET SUMMARY
+----------------------------------------
+Total rows: 661
+Total stations: 469
+Years: 2015 - 2024
+Cities: Cologne, Leipzig, Stuttgart
+
+2. TEMPORAL HOLDOUT SPLIT
+----------------------------------------
+Training years: [np.int64(2015), np.int64(2016), np.int64(2017), np.int64(2018), np.int64(2019), np.int64(2020), np.int64(2021), np.int64(2022)]
+Training rows: 484
+Testing years: [2022, 2023, 2024]
+Testing rows: 177
+Split ratio: 73.2% / 26.8%
+
+3. LEAVE-ONE-STATION-OUT (LOSO)
+----------------------------------------
+Total stations: 469
+Each iteration: Train on 468 stations, Test on 1 station
+Total LOSO iterations: 469
+
+4. ROLLING ORIGIN
+----------------------------------------
+Number of rolling origins: 6
+Each iteration: Train on 2015-X, Test on X+1
+
+5. VALIDATION STRATEGY FOR MODELING
+----------------------------------------
+Primary validation: Temporal holdout (2015-2021 train, 2022-2024 test)
+Secondary validation: Leave-One-Station-Out (test generalization)
+Tertiary validation: Rolling origin (test stability over time)
+
+6. DATA LEAKAGE PREVENTION
+----------------------------------------
+• All preprocessing fitted ONLY on training data
+• Scaling: Fit on train, transform train and test
+• Imputation: Fit on train, transform train and test
+• Feature selection: Fit on train only
+• Clustering: Fit on train only
+
+7. METRICS TO REPORT
+----------------------------------------
+• Primary: MAE (Mean Absolute Error)
+• Secondary: RMSE (Root Mean Square Error)
+• Supplementary: R²
+• Uncertainty: Prediction interval coverage
+• By group: Error by city, station, year, regime

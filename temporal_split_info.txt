@@ -1,0 +1,7 @@
+TEMPORAL HOLDOUT SPLIT
+----------------------------------------
+Training years: [2015, 2016, 2017, 2018, 2019, 2020, 2021]
+Training rows: 484
+Testing years: [2022, 2023, 2024]
+Testing rows: 177
+Split ratio: 73.2% / 26.8%
