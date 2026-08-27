@@ -1,0 +1,47 @@
+================================================================================
+EXPLORATORY DATA ANALYSIS (EDA) SUMMARY
+Groundwater Quality Forecasting Project
+Generated on: 2026-08-15 22:29:38
+================================================================================
+
+1. KEY RELATIONSHIPS
+----------------------------------------
+Rainfall vs Groundwater:
+  - Sulfate: Strong negative correlation (dilution)
+  - EC: Moderate negative correlation
+  - Chloride: Moderate negative correlation
+  - Nitrate: Weak negative correlation
+
+Temperature vs Groundwater:
+  - All parameters: Weak negative correlations
+
+SPI vs Groundwater:
+  - All parameters: Very weak or no correlation
+
+2. CITY COMPARISONS
+----------------------------------------
+• Stuttgart: Highest EC, chloride, sulfate
+• Leipzig: Highest nitrate
+• Cologne: Lowest concentrations across all parameters
+
+3. TEMPORAL PATTERNS
+----------------------------------------
+• Stuttgart: Decreasing EC, chloride, sulfate (2016-2024)
+• Leipzig: Decreasing nitrate
+• Cologne: Stable across all parameters
+
+4. KEY INSIGHTS FOR MODELING
+----------------------------------------
+• Rainfall is the most important climate predictor
+• SPI is not a strong predictor (r < 0.15)
+• Stuttgart will be most challenging to predict
+• Separate models may be needed for each city/regime
+• EC is strongly linked to sulfate and chloride
+• Dilution from rainfall is the dominant climate mechanism
+
+5. RECOMMENDATIONS
+----------------------------------------
+• Use rainfall as primary climate predictor
+• Consider excluding SPI from models
+• Train separate models by city or hydrochemical regime
+• Report predictions with uncertainty for Stuttgart
