@@ -1,0 +1,60 @@
+================================================================================
+PHASE 11: RULE-BASED WQI REPORT
+Groundwater Quality Forecasting Project
+Generated on: 2026-08-19 12:41:08
+================================================================================
+
+1. WQI STANDARDS USED
+----------------------------------------
+  chloride: 250
+  nitrate: 50
+  sulfate: 250
+  iron: 0.3
+  manganese: 0.1
+  EC: 2500
+  pH: 8.5
+  Ideal pH: 7.0
+
+2. WQI DISTRIBUTION
+----------------------------------------
+Classification
+Excellent     494
+Unsuitable     80
+Good           69
+Poor           14
+Very Poor       4
+
+3. WQI BY CITY
+----------------------------------------
+                 mean         std       min          max
+City                                                    
+Cologne      0.558990    0.293292  0.083408     1.381085
+Leipzig    109.432136  293.511652  0.896565  2523.375754
+Stuttgart  130.638175  444.460915  0.969412  4144.376240
+
+4. CLASSIFICATION CRITERIA
+----------------------------------------
+  ≤ 25  : Excellent
+  25-50 : Good
+  50-75 : Poor
+  75-100: Very Poor
+  > 100 : Unsuitable
+
+5. WQI PREDICTION PERFORMANCE
+----------------------------------------
+  ⚠️ Model files not available. Upload .pkl files from Phase 7 to enable comparison.
+
+6. KEY FINDINGS
+----------------------------------------
+• WQI calculated by rule from predicted parameters (NOT ML)
+• This avoids circular modeling as per Prof. Buchmann's guidance
+• WQI classification provides easy-to-understand water quality assessment
+• Cologne: Mean WQI = 0.6, Most common classification: Excellent
+• Leipzig: Mean WQI = 109.4, Most common classification: Excellent
+• Stuttgart: Mean WQI = 130.6, Most common classification: Excellent
+
+7. METHODOLOGICAL NOTE
+----------------------------------------
+WQI was calculated by rule from predicted parameters, NOT predicted directly by ML.
+This follows Prof. Buchmann's guidance: 'The model forecasts selected water parameters;
+WQI is then calculated by rule.'
