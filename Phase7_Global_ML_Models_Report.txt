@@ -1,0 +1,84 @@
+================================================================================
+PHASE 7: GLOBAL ML MODELS REPORT
+Groundwater Quality Forecasting Project
+Generated on: 2026-08-16 13:41:17
+================================================================================
+
+1. MODELS EVALUATED
+----------------------------------------
+1. Random Forest
+2. XGBoost
+Comparison Baseline: Naive Prediction (Last Year's Value)
+
+2. VALIDATION
+----------------------------------------
+Training years: [2015, 2016, 2017, 2018, 2019, 2020, 2021]
+Testing years: [2022, 2023, 2024]
+Training rows: 484
+Testing rows: 177
+
+3. MODEL PERFORMANCE (MAE)
+----------------------------------------
+Parameter  Baseline (Naive) MAE  Random Forest MAE  XGBoost MAE  RF Improvement (%)  XGB Improvement (%)
+       EC                351.20         313.043768   369.443438                10.9                 -5.2
+  NITRATE                 13.20           9.481117     9.682074                28.2                 26.7
+ CHLORIDE                 38.70          35.620436    42.471317                 8.0                 -9.7
+  SULFATE                128.50         110.759231   109.110971                13.8                 15.1
+       PH                  0.48           0.476655     0.498950                 0.7                 -3.9
+
+4. KEY FINDINGS
+----------------------------------------
+
+EC:
+  Baseline MAE: 351.20
+  Random Forest MAE: 313.04
+  ✅ Random Forest beats baseline by 10.9%
+  XGBoost MAE: 369.44
+  ⚠️ XGBoost does NOT beat baseline
+
+NITRATE:
+  Baseline MAE: 13.20
+  Random Forest MAE: 9.48
+  ✅ Random Forest beats baseline by 28.2%
+  XGBoost MAE: 9.68
+  ✅ XGBoost beats baseline by 26.7%
+
+CHLORIDE:
+  Baseline MAE: 38.70
+  Random Forest MAE: 35.62
+  ✅ Random Forest beats baseline by 8.0%
+  XGBoost MAE: 42.47
+  ⚠️ XGBoost does NOT beat baseline
+
+SULFATE:
+  Baseline MAE: 128.50
+  Random Forest MAE: 110.76
+  ✅ Random Forest beats baseline by 13.8%
+  XGBoost MAE: 109.11
+  ✅ XGBoost beats baseline by 15.1%
+
+PH:
+  Baseline MAE: 0.48
+  Random Forest MAE: 0.48
+  ✅ Random Forest beats baseline by 0.7%
+  XGBoost MAE: 0.50
+  ⚠️ XGBoost does NOT beat baseline
+
+5. MODELS SAVED
+----------------------------------------
+  RF_EC_model.pkl
+  XGB_EC_model.pkl
+  RF_nitrate_model.pkl
+  XGB_nitrate_model.pkl
+  RF_chloride_model.pkl
+  XGB_chloride_model.pkl
+  RF_sulfate_model.pkl
+  XGB_sulfate_model.pkl
+  RF_pH_model.pkl
+  XGB_pH_model.pkl
+  scaler.pkl
+
+6. NEXT STEPS
+----------------------------------------
+1. Phase 8: Local Models (per Regime)
+2. Compare Global vs Local performance
