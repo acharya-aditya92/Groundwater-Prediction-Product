@@ -1,0 +1,70 @@
+================================================================================
+DATA QUALITY ASSESSMENT REPORT
+Groundwater Quality Forecasting Project
+Generated on: 2026-08-15 16:44:55
+================================================================================
+
+1. DATASET OVERVIEW
+----------------------------------------
+Total rows: 661
+Total columns: 13
+Cities: ['Cologne', 'Leipzig', 'Stuttgart']
+Years: 2015 - 2024
+Total unique stations: 469
+
+2. MISSING VALUES
+----------------------------------------
+           Missing Count  Missing %
+manganese            318  48.108926
+iron                 314  47.503782
+sulfate               59   8.925870
+chloride              59   8.925870
+nitrate                9   1.361573
+EC                     6   0.907716
+pH                     4   0.605144
+
+3. SUMMARY STATISTICS
+----------------------------------------
+        manganese        iron     nitrate           EC          pH    chloride      sulfate  temperature     rainfall         SPI
+count  343.000000  347.000000  652.000000   655.000000  657.000000  602.000000   602.000000   661.000000   661.000000  661.000000
+mean     0.168618    0.343023   11.701707  1064.030209    6.805098   70.846076   236.643961    11.010166   596.084720   -0.020378
+std      0.471225    1.229921   17.458044   435.595309    0.580736   69.432937   195.571587     0.623161   184.425367    0.953190
+min      0.000050    0.000050    0.000000    50.000000    3.450000    0.000000     0.002000     9.660000   333.200000   -1.670000
+25%      0.000300    0.000175    0.100000   755.500000    6.700000   14.175000    21.400000    10.520000   469.300000   -0.680000
+50%      0.001100    0.005000    2.250000  1050.000000    6.900000   67.000000   250.000000    11.180000   592.600000   -0.140000
+75%      0.038500    0.015000   17.000000  1275.000000    7.100000   97.900000   360.000000    11.330000   718.700000    0.520000
+max      4.686000    8.100000  120.000000  3110.000000    7.900000  500.000000  1229.000000    12.060000  1072.900000    1.940000
+
+4. OUTLIER SUMMARY
+----------------------------------------
+   Parameter  Outlier Count  Outlier %  Lower Bound  Upper Bound
+0  manganese             64       9.68      -0.0570       0.0958
+1       iron             49       7.41      -0.0221       0.0372
+2    nitrate             44       6.66     -25.2500      42.3500
+3         EC             17       2.57     -23.7500    2054.2500
+4   chloride             15       2.27    -111.4125     223.4875
+5    sulfate              8       1.21    -486.5000     867.9000
+
+5. CITY COMPARISON (Mean Values)
+----------------------------------------
+           manganese      iron    nitrate           EC        pH    chloride     sulfate  temperature    rainfall       SPI
+City                                                                                                                       
+Cologne     0.000236  0.000156   0.028057   688.086481  6.579126    0.001997    0.020473    11.575833  837.270833  0.268681
+Leipzig     0.267516  0.622830  14.813980  1139.062943  6.801896   82.360582  322.234568    10.867698  478.421429 -0.145397
+Stuttgart   0.350536  0.496932  15.538406  1256.056790  7.055099  143.959375  258.150625    10.811583  666.199281  0.020144
+
+6. KEY INSIGHTS
+----------------------------------------
+• Stuttgart shows highest EC, chloride, and sulfate concentrations
+• Leipzig shows highest nitrate concentrations
+• Cologne shows lowest concentrations across all parameters
+• Stuttgart shows declining trends in EC, chloride, and sulfate (2016-2024)
+• Leipzig shows declining nitrate trend
+• pH is stable across all cities
+
+7. DATA QUALITY NOTES
+----------------------------------------
+• Manganese and iron have the highest missing rates (48% and 47%)
+• Chloride and sulfate have 8.9% missing values (Stuttgart only)
+• Stuttgart is the most challenging city for modeling (extreme values)
+• Check generated plots for visual inspection
