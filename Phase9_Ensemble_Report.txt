@@ -1,0 +1,50 @@
+================================================================================
+PHASE 9: ENSEMBLE MODELING REPORT
+Groundwater Quality Forecasting Project
+Generated on: 2026-08-17 10:05:46
+================================================================================
+
+1. ENSEMBLE APPROACH
+----------------------------------------
+Method: Simple average of Random Forest and XGBoost predictions
+Alternative: Weighted average based on individual model performance
+
+2. MODEL COMPARISON (MAE)
+----------------------------------------
+Parameter     RF_MAE    XGB_MAE  Ensemble_MAE     Best
+       EC 313.043768 369.443438    326.140011       RF
+  NITRATE   9.481117   9.682074      9.501321       RF
+ CHLORIDE  35.620436  42.471317     38.474443       RF
+  SULFATE 110.759231 109.110971    105.817480 Ensemble
+       PH   0.476655   0.498950      0.487646       RF
+
+3. ENSEMBLE WEIGHTS
+----------------------------------------
+Parameter  RF_Weight  XGB_Weight  Weighted_Ensemble_MAE  Simple_Ensemble_MAE   Best_MAE
+       EC   0.541319    0.458681             323.548602           326.140011 313.043768
+  NITRATE   0.505243    0.494757               9.500138             9.501321   9.481117
+ CHLORIDE   0.543864    0.456136              38.166834            38.474443  35.620436
+  SULFATE   0.496252    0.503748             105.809632           105.817480 105.809632
+       PH   0.511426    0.488574               0.487388             0.487646   0.476655
+
+4. KEY FINDINGS
+----------------------------------------
+Best performing method:
+  RF: 4 parameters
+  Ensemble: 1 parameters
+
+• EC: RF is best (MAE = 313.04)
+• NITRATE: RF is best (MAE = 9.48)
+• CHLORIDE: RF is best (MAE = 35.62)
+• SULFATE: Ensemble is best (MAE = 105.82)
+• PH: RF is best (MAE = 0.48)
+
+5. RECOMMENDATION
+----------------------------------------
+Individual models perform better than ensemble.
+RECOMMENDATION: Use individual models for the final product.
+
+6. NEXT STEPS
+----------------------------------------
+1. Phase 10: Uncertainty Estimation
+2. Phase 11: WQI Calculation
