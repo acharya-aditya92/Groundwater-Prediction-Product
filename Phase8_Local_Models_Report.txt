@@ -1,0 +1,70 @@
+================================================================================
+PHASE 8: LOCAL MODELS (PER REGIME) REPORT
+Groundwater Quality Forecasting Project
+Generated on: 2026-08-16 13:56:54
+================================================================================
+
+1. REGIMES USED FOR LOCAL MODELS
+----------------------------------------
+
+Cluster 0:
+  Size: 166 rows
+  Cologne: 142 rows
+  Leipzig: 12 rows
+  Stuttgart: 12 rows
+
+Cluster 1:
+  Size: 150 rows
+  Leipzig: 109 rows
+  Stuttgart: 39 rows
+  Cologne: 2 rows
+
+Cluster 2:
+  Size: 16 rows
+  Leipzig: 13 rows
+  Stuttgart: 3 rows
+
+
+2. LOCAL MODEL PERFORMANCE
+----------------------------------------
+ Cluster   Target                 Model        MAE       RMSE        R2  n_samples
+       0       EC Random Forest (Local) 322.088826 391.197023 -0.421803         64
+       0  nitrate Random Forest (Local)   3.421325   5.017355 -0.035580         64
+       0 chloride Random Forest (Local)   8.827329  13.277442  0.175944         64
+       0  sulfate Random Forest (Local)  34.700003  39.686574 -0.378877         64
+       0       pH Random Forest (Local)   0.626887   0.758058 -0.043320         64
+       1       EC Random Forest (Local) 378.338920 508.824379 -0.764671         30
+       1  nitrate Random Forest (Local)  16.477718  25.332385  0.053719         30
+       1 chloride Random Forest (Local)  65.296080 106.991846  0.027962         30
+       1  sulfate Random Forest (Local) 137.315165 227.614881 -0.270776         30
+       1       pH Random Forest (Local)   0.333401   0.505987 -0.080425         30
+
+3. GLOBAL VS LOCAL COMPARISON
+----------------------------------------
+Parameter  Global Model (RF) MAE  Local Model (RF) MAE  Improvement (%)  Clusters
+       EC                 348.50            350.213873             -0.5         2
+  NITRATE                  11.80              9.949521             15.7         2
+ CHLORIDE                  34.20             37.061705             -8.4         2
+  SULFATE                 122.30             86.007584             29.7         2
+       PH                   0.39              0.480144            -23.1         2
+
+4. KEY FINDINGS
+----------------------------------------
+• EC: Global model performs better than local
+• NITRATE: Local model improves by 15.7% over global
+• CHLORIDE: Global model performs better than local
+• SULFATE: Local model improves by 29.7% over global
+• PH: Global model performs better than local
+
+
+5. RECOMMENDATION
+----------------------------------------
+Local models show an average improvement of 2.7% over global models.
+RECOMMENDATION: Use LOCAL models for the final product.
+
+
+6. NEXT STEPS
+----------------------------------------
+1. Phase 9: Ensemble Modeling
+2. Phase 10: Uncertainty Estimation
+3. Phase 11: WQI Calculation
