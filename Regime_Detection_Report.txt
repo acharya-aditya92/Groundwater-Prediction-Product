@@ -1,0 +1,70 @@
+================================================================================
+REGIME DETECTION REPORT
+Groundwater Quality Forecasting Project
+Generated on: 2026-08-16 11:18:11
+================================================================================
+
+1. CLUSTERING METHODS EVALUATED
+----------------------------------------
+1. K-Means Clustering
+2. Gaussian Mixture Model (GMM)
+3. Hierarchical Clustering
+
+2. OPTIMAL NUMBER OF CLUSTERS
+----------------------------------------
+Best K based on Silhouette Score: 3
+Number of clusters found: 3
+
+3. CLUSTER COMPARISON
+----------------------------------------
+         Method  Silhouette Score  Davies-Bouldin Score  Number of Clusters
+0       K-Means          0.354348              1.069234                   3
+1           GMM          0.220834              1.955670                   3
+2  Hierarchical          0.329837              1.129064                   3
+
+4. CLUSTER PROFILES
+----------------------------------------
+                  EC    nitrate    chloride     sulfate        pH  manganese      iron
+Cluster                                                                               
+0         674.938474   2.025509    6.905935   17.601286  6.555447   0.020348  0.002007
+1        1300.271111  23.216328  113.735682  335.272342  6.853444   0.195848  0.183305
+2        1551.562500   1.689812  121.275000  456.812500  7.104687   1.539937  5.236937
+
+5. CLUSTER INTERPRETATION
+----------------------------------------
+
+Cluster 0: Clean, Dilute Groundwater
+  Characteristics: Low EC, low nitrate, very low chloride/sulfate, low iron/manganese
+  Dominant City: Cologne
+  Size: 166 rows
+
+Cluster 1: Agricultural Influence
+  Characteristics: Moderate EC, high nitrate, moderate chloride/sulfate
+  Dominant City: Leipzig
+  Size: 150 rows
+
+Cluster 2: Geological/Industrial Influence
+  Characteristics: High EC, high chloride/sulfate, high iron/manganese, low nitrate
+  Dominant City: Stuttgart
+  Size: 16 rows
+
+
+6. RECOMMENDATION FOR MODELING
+----------------------------------------
+Based on the analysis, 3 groundwater regimes were identified.
+For Phase 7 and 8 (ML Modeling):
+  1. Build a GLOBAL model on ALL data (one model for all regimes)
+  2. Build LOCAL models for EACH regime (3 separate models)
+  3. Compare global vs local performance
+
+7. BEST CLUSTERING METHOD
+----------------------------------------
+Best method: K-Means (highest silhouette score)
+
+8. KEY FINDINGS
+----------------------------------------
+• 3 distinct groundwater regimes were identified
+• Cluster 0 (Cologne): Clean, dilute groundwater
+• Cluster 1 (Leipzig): Agricultural influence (high nitrate)
+• Cluster 2 (Stuttgart): Geological/industrial influence (high EC, Fe, Mn)
+• City-specific differences confirm need for regime-based modeling
