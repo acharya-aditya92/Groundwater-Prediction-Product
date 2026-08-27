@@ -1,0 +1,45 @@
+================================================================================
+BASELINE MODELS REPORT
+Groundwater Quality Forecasting Project
+Generated on: 2026-08-16 10:17:31
+================================================================================
+
+1. BASELINE MODELS EVALUATED
+----------------------------------------
+1. Mean Prediction - Predicts the average value from training data
+2. Naive Prediction - Predicts the last observed value for each station
+3. Linear Regression - Simple linear relationship
+4. Ridge Regression - Linear with regularization
+
+2. COMPARISON RESULTS (MAE - Lower is Better)
+----------------------------------------
+model     Linear Regression        Mean       Naive       Ridge
+target                                                         
+EC               343.869236  346.116687  100.074359  343.182100
+chloride          65.079892   53.532355    5.716229   64.780605
+nitrate           10.785429   12.401288    0.642793   10.781581
+pH                 0.550464    0.431657    0.465141    0.549466
+sulfate          104.951296  171.122894   15.157926  105.350122
+
+3. KEY FINDINGS
+----------------------------------------
+• EC: Best model = Naive (MAE = 100.07)
+• NITRATE: Best model = Naive (MAE = 0.64)
+• CHLORIDE: Best model = Naive (MAE = 5.72)
+• SULFATE: Best model = Naive (MAE = 15.16)
+• PH: Best model = Mean (MAE = 0.43)
+
+4. OBSERVATIONS
+----------------------------------------
+• Mean prediction is often the simplest baseline
+• Naive prediction tests if there is temporal structure
+• Linear Regression tests if relationships are linear
+• Ridge Regression tests if regularization improves performance
+• These baselines establish the minimum performance expected from ML models
+• ML models must outperform these baselines to be considered useful
+
+5. NEXT STEPS
+----------------------------------------
+• Proceed to Phase 6: Regime Detection (Clustering)
+• Proceed to Phase 7: Global ML Models (Random Forest, XGBoost)
+• Compare ML performance against these baselines
