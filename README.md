@@ -57,61 +57,63 @@ The framework consists of 11 phases:
 ---
 
 ## 📁 Repository Structure
+
+```
 Groundwater-Prediction-Product/
 │
 ├── Phase1_Data_Integration/
-│ └── Master_Dataset.xlsx
+│   └── Master_Dataset.xlsx
 │
 ├── Phase2_Data_Quality/
-│ └── Phase2_Data_Quality.ipynb
+│   └── Phase2_Data_Quality.ipynb
 │
 ├── Phase3_EDA/
-│ └── Phase3_EDA.ipynb
+│   └── Phase3_EDA.ipynb
 │
 ├── Phase4_Validation_Framework/
-│ └── Phase4_Validation.ipynb
+│   └── Phase4_Validation.ipynb
 │
 ├── Phase5_Baseline_Models/
-│ └── Phase5_Baselines.ipynb
+│   └── Phase5_Baselines.ipynb
 │
 ├── Phase6_Regime_Detection/
-│ └── Phase6_Regime_Detection.ipynb
+│   └── Phase6_Regime_Detection.ipynb
 │
 ├── Phase7_Global_ML_Models/
-│ ├── Phase7_Global_ML_Models.ipynb
-│ └── models/
-│ ├── RF_EC_model.pkl
-│ ├── RF_nitrate_model.pkl
-│ ├── RF_chloride_model.pkl
-│ ├── RF_sulfate_model.pkl
-│ ├── RF_pH_model.pkl
-│ ├── XGB_EC_model.pkl
-│ ├── XGB_nitrate_model.pkl
-│ ├── XGB_chloride_model.pkl
-│ ├── XGB_sulfate_model.pkl
-│ ├── XGB_pH_model.pkl
-│ └── scaler.pkl
+│   ├── Phase7_Global_ML_Models.ipynb
+│   └── models/
+│       ├── RF_EC_model.pkl
+│       ├── RF_nitrate_model.pkl
+│       ├── RF_chloride_model.pkl
+│       ├── RF_sulfate_model.pkl
+│       ├── RF_pH_model.pkl
+│       ├── XGB_EC_model.pkl
+│       ├── XGB_nitrate_model.pkl
+│       ├── XGB_chloride_model.pkl
+│       ├── XGB_sulfate_model.pkl
+│       ├── XGB_pH_model.pkl
+│       └── scaler.pkl
 │
 ├── Phase8_Local_Models/
-│ └── Phase8_Local_Models.ipynb
+│   └── Phase8_Local_Models.ipynb
 │
 ├── Phase9_Ensemble_Modeling/
-│ └── Phase9_Ensemble.ipynb
+│   └── Phase9_Ensemble.ipynb
 │
 ├── Phase10_Uncertainty_Estimation/
-│ └── Phase10_Uncertainty.ipynb
+│   └── Phase10_Uncertainty.ipynb
 │
 ├── Phase11_WQI_Calculation/
-│ └── Phase11_WQI.ipynb
+│   └── Phase11_WQI.ipynb
 │
 ├── Results/
-│ ├── Excel_Files/
-│ ├── Plots/
-│ └── Reports/
+│   ├── Excel_Files/
+│   ├── Plots/
+│   └── Reports/
 │
 ├── requirements.txt
 └── README.md
-
+```
 
 ---
 
